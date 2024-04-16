@@ -1,135 +1,155 @@
+@font-face {
+    font-family: "Steelfish";
+    src: url("fonts/SteelfishLt-Regular.woff") format('woff'),
+         url("fonts/SteelfishRg-Bold.woff") format('woff');
+}        
+
 * {
     box-sizing: border-box;
 }
-.button-1 {
-    width: 100px;
-    height: 100px;
-    padding: 10px 20px;
-    font-size: 40px;
-    border: none;
-    cursor: pointer;
-    transition: 0.5s;
-    border-radius: 50%;
-    background-color: blueviolet;
-    margin-bottom: 100px;
+
+html ::selection{
+    color: var(--main);
+    background-color: var(--second-main);
 }
 
-.button-1-active {
-    background-color: rgb(128, 0, 0);
-    width: 100px;
-    height: 100px;
-    padding: 10px 20px;
-    font-size: 40px;
-    border: none;
-    cursor: pointer;
-    transition: 0.5s;
-    border-radius: 50%;
-    margin-bottom: 100px;
+a:visited {
+    color:  white;
 }
 
-.button-2{
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: 0.5s;
-    background-color: rgb(234, 255, 0);
-    margin-bottom: 100px;
-    margin-bottom: 100px;
-}
-
-.button-2-active {
-    background-color: rgb(255, 0, 212);
-}
-
-.card{
-    width: 200px;
-    height: 400px;
-    background-color: aqua;
-    text-align: center;
-    font-size: 25px;
-}
-
-.card img{
-    width: 200px;
-
-}
-
-#button-3 {
-    width: 120px;
-    height: 50px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: 0.5s;
-    background-color: rgb(158, 227, 213);
-}
-.cart-icon-container{
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 10px;
-}
-.product-bas{
-    padding: 10px;
-    width: 300px;
-    position: relative;
-    margin-bottom: 100px;
-}
-#cart-icon {
-    width: 50px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 10px;
-    display: flex;
-    align-items: center;
-}
-#clickCount{
-    background-color: #e45151;
-    color: #000000;
-    padding: 3px 6px;
-    border-radius: 50%;
-    font-size: 12px;
-    position: absolute;
-    top: 13px;
-    right: -26px;
-}
-#clear-basket{
-    background-color: rgb(43, 255, 0);
-    color: black;
-}
-
-.card-2{
-    width: 280px;
-    height: 350px;
-    background-color: rgb(255, 0, 208);
-    margin-top: 150px;
-}
-.card-2 ul{
-    padding-top: 20px;
-    display: flex;
-    gap: 40px;
+ul {
     list-style-type: none;
 }
-.card-2 li{
-    width: 40px;
-    height: 20px;
-    background-color: blue;
-    text-align: center;
-}
-.card-2 button{
-    margin: 20px 20px 20px 65px;
-    width: 140px;
-    height: 50px;
-    font-size: 18px;
-    background-color: aqua;
+
+h1 h2 h3 h4 h5 h6 {
+    font-family: 'Steelfish', sans-serif;
 }
 
-.coords{
-    font-size: 20px;
-    margin-top: 70px;
-    background-color: aqua;
-    padding: 5px;
+:root {
+    font-size: 62.5%;
+    --second-main: #F49C89;
+    --main-text: #ECEEF8;
+    --main: #34344E;
+    --sub-text: #ffffff;
+    --line-color: rgba(52, 52, 78, 0.50);
+}  
+
+header{
+    font-size: 1.5rem;
+    height: 100px;
+}
+
+.main-header .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    text-align: center;
+    padding: 16px 20px 17px;
+    background-color: var(--main);
+}
+summary
+.second-main-part ::selection{
+    color: var(--second-main);
+    background-color: var(--main);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.main-header__link{
+    color: var(--sub-text);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+}
+.main-header__sp{
+    color: var(--sub-text);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+}
+.main-header__loc{
+    color: var(--sub-text);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+}
+
+.main-header__span{
     padding-left: 10px;
-    width: 300px;
+}
+
+.main-header__burger{
+    display: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+#open-button {
+    background-color: #F49C89;
+    font-weight: bold;
+    font-size: 1.5rem;  
+    height: 3rem;
+    width: 7rem;
+    border-radius: 10%;
+}
+
+#modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    background-color: #34344E; 
+}
+
+form {
+    color: white;
+    font-size: 25px;
+}
+input:user-valid {
+    border-color: green;
+    border-width: 4px;
+}
+input:user-invalid {
+    border-color: red;
+    border-width: 4px;
+}
+span{
+    font-size: 1.3rem;
+}
+form button {
+    background-color: #F49C89;
+    border-radius: 10%;
+    height: 3rem;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    margin-right: 3rem;
+}
+
+.error-message {
+    color: red;
+    font-size: 2rem;
 }

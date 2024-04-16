@@ -3,60 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <title>js</title>
 </head>
 <body>
+    <header class="main-header">
+        <div class="wrapper">
+            <a href="#" class="logo-logo">
+                <img src="imgs/logo.svg" alt="логотип">
+            </a>
+            <a href="#" class="main-header__loc">
+                <img src="imgs/location.svg" alt="адресс">
+                <span class="main-header__sp">8 минут от м. Маяковская</span>
+            </a><br>
+            <a href="#" class="main-header__link">студии</a>
+            <a href="#" class="main-header__link">тест-драйв</a>
+            <a href="#" class="main-header__link">кейсы</a>
+            <a href="#" class="main-header__link">контакты</a>
+            <a><button id="open-button">форма</button></a>
+            <a href="#" class="main-header__sp">
+                <img src="imgs/phone.svg" alt="номер телефона">
+                <span class="main-header__span">+7 909 151-08-70</span>
+            </a>
+            <button class="main-header__burger">
+                <img src="imgs/burger.svg" alt="бургер меню">
+            </button>
+        </div>
+    </header>
     <main>
-        <h1>Файзуллин Артур Раилевич - Лабораторная работа №3</h1>
-        <section>
-            <button id="button" class="button-1">👍</button>
-        </section>
+        <dialog id="modal">
+            <form novalidate id="form">
+                <label for="nameInput">Имя: <span>(обязательное поле)</span></label>
+                <input type="text" id="name" required aria-describedby="name-error"/>
+                <div id="name-error" class="error-message" hidden>введите поле корректно</div><br>
+            
+                <label for="emailInput">Email: <span>(обязательное поле)</span></label>
+                <input type="email" id="email" required aria-describedby="email-error"/>
+                <div id="email-error" class="error-message" hidden>введите поле корректно</div><br>
+            
+                <label for="passwordInput">Пароль: <span>(обязательное поле, не менее 6 символов)</span></label>
+                <input type="password" id="password" minlength="6" aria-describedby="password-error"/>
+                <div id="password-error" class="error-message" hidden>введите поле корректно</div><br>
 
-        <section>
-            <button class="button-2" id="likee" >👍</button>
-            <button class="button-2" id="dislike" >👎</button>
-        </section>
-
-        <section>
-            <div class="product-bas">
-                <div class="cart-icon-container">
-                    <img src="img/basket.svg" alt="Shopping Cart Icon" id="cart-icon">
-                    <span id="clickCount">0</span>
-                </div>
-            </div>
-            <button id="clear-basket" >Очистить</button>
-            <div class="card">
-                <p>Деревянный стол</p>
-                <img src="img/stol.jpg" alt="стол">
-                <p style="font-size: 15px;">Представленная информация носит справочный характер.Изображение на картинках может отличаться от персонального визуального восприятия реального изделия.</p>
-                <button id='button-3' >В корзину</button>
-            </div>
-        </section>
-
-        <section >
-            <div class="card-2">
-                <ul>
-                    <li id="element-1"></li>
-                    <li id="element-2"></li>
-                    <li id="element-3"></li>
-                </ul>
-                <button id="add-element">создать список</button>
-                <button id="sort-max">сортировка по убыванию</button>
-                <button id="sort-min">сортировка по возрастанию</button>
-
-            </div>
-        </section>
-
-        <section>
-            <div class="coords">
-                <p class="x">Клик по координатам X: </p>
-                <p class="y">Клик по координатам Y: </p>
-            </div>
-        </section>
-
-
+                <button id="password-button" type="button">Показать пароль</button>
+                <button type="submit">Отправить</button>
+                <button id="close-modal" type="button">Закрыть</button>
+            </form>
+              
+        </dialog>
     </main>
-    <script src="script3.js"></script>
+    <script src="script4.js"></script>
 </body>
 </html>
